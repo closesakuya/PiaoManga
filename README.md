@@ -4,12 +4,12 @@ a manga downloader, can witch source site, currently support site "manhuaju"
 一个基于pyppeteer的漫画下载器，目前完成基本框架并支持一个漫画源"manhuaju.com"，后续会持续完善。
 可增加/piaomanga/comicsource/MangaSource/下的代码来增加漫画源，按示例格式添加后会自动识别。
 
-##安装 :
+## 安装 :
 `>>python setup.py install`
 (pyppeteer库需要安装cromium浏览器，若下载速度慢建议手动下载后通过如下函数：
 `set_chromium(exepath:str = None, userdatapath:str = None)`配置浏览器路径及浏览器缓存文件路径)
 
-##使用:
+## 使用:
 
 ```python
 from piaomanga import PiaoManga,set_chromium,get_source_list
