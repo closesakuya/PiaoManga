@@ -233,11 +233,9 @@ class Downloader:
         return ret
 
     def download(self, tasks: DownloadTaskStatus or List[DownloadTaskStatus], successCallback: Callable = None,
-                 failedCallback: Callable = None ) -> str or None:
+                 failedCallback: Callable = None ) -> str:
         if type(tasks) is not list:
             tasks = [tasks]
-        if not tasks:
-            return None
 
         # 启动eventloop
         self._ev_pool.start()

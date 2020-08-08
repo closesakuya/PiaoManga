@@ -3,8 +3,8 @@ sys.path.append("..")
 sys.path.append("../..")
 sys.path.append("../../..")
 
-from PiaoManga.piaomanga.comicsource.MangaSource.manhuagui import Manhuagui
-from PiaoManga import *
+from piaomanga.comicsource.MangaSource.manhuagui import Manhuagui
+from piaomanga import *
 
 set_chromium(r"D:\MY_TOOL\chrome-win\chrome-win\chrome.exe")
 print(get_source_list())

@@ -1,0 +1,1 @@
+from .AbsComic import *

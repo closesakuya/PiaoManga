@@ -1,9 +1,9 @@
-__all__ = ['PiaoManga', 'set_chromium', 'get_source_list']
-# from SourceFactory import ComicSourceFactory
+__all__=['PiaoManga', 'set_chromium', 'get_source_list']
+#from SourceFactory import ComicSourceFactory
 from .comicsource import *
 from typing import List, Dict, Set
 import logging
-# from AbsComic import *
+#from AbsComic import *
 from .m_types import *
 from .utils import *
 
@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - '
 logger = logging.getLogger(__name__)
 
 
-def set_chromium(exepath: str = None, userdatapath: str = None):
+def set_chromium(exepath:str = None, userdatapath:str = None):
     return UrlsTool.set_chromium_path(exepath, userdatapath)
 
 
@@ -142,18 +142,6 @@ class PiaoManga:
 
         return self._chapter
 
-    def load_chapter(self, chapter: comicChapter, loadpertime=10):
-        assert self.cursource
-        return self.cursource.get_chap_page_url_list(chapter, loadpertime=loadpertime)
-
-    def download_chapter(self, chapter: comicChapter, save_path: str = None, successCallback=None) -> str:
-        assert self.cursource
-        return self.cursource.download_chapter(chapter, save_path, successCallback=successCallback)
-
-    def get_download_status(self, taskid: str):
-        assert self.cursource
-        return self.cursource.downloader.get_progress(taskid)
-
     def read(self, chapterNo: int = None, pageNo: int = None):
 
         if not chapterNo:
@@ -167,5 +155,6 @@ class PiaoManga:
 
 
 import timeit
+
 
 # if __name__ == "__main__":
